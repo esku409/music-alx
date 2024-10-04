@@ -1,5 +1,4 @@
 import { SWRConfig } from 'swr';
-import { fetchProxyMultipleEntities } from '../../utils/fetchers';
 import TabsContainer from '../../components/favorites-page/TabsContainer';
 import * as Tabs from '@radix-ui/react-tabs';
 import { Suspense } from 'react';
