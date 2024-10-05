@@ -16,7 +16,7 @@ const AlbumPage = () => {
   if (error) {
     return <div>Error has occured!</div>;
   }
-  console.log('album',Album);
+
   const { title, cover_medium, release_date, tracks, type } = Album;
   const releaseYear = getYearFromDate(release_date);
 

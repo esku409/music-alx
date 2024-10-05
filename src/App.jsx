@@ -33,7 +33,7 @@ function App() {
         { path: 'top_artists', element: <TopArtists/> },  // Cart route
         { path: 'album/:id', element: <AlbumPage/> },  // Cart route
 
-        // { path: 'favorites', element: <FavoritesPage/> },  // Cart route
+        { path: 'favorites', element: <FavoritesPage/> },  // Cart route
 
       ],
     },

@@ -4,7 +4,6 @@ import { fetchSearchData } from "../../utils/fetchers";
 
 export async function get(query) {
   const [tracks, albums, artists] = await fetchSearchData(query);
-  console.log(tracks, albums, artists);
   return {
     track: tracks.data,
     album: albums.data,

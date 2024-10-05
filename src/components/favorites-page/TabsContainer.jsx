@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/features/favoritesSlice';
 import TracksTabContent from '../favorites-page/tabs/TracksTabContent';
 import AlbumsTabContent from './tabs/AlbumsTabContent';
-import RadioTabContainer from '../favorites-page/tabs/RadioTabContainer';
 import ArtistsTabContent from '../favorites-page/tabs/ArtistsTabContent';
 import PlaylistsTabContent from '../favorites-page/tabs/PlaylistsTabContent';
 import TabContentContainer from '../favorites-page/TabContentContainer';
@@ -24,13 +23,7 @@ const TabsContainer = () => {
                     <AlbumsTabContent albums={ favorites.album } />
                 </TabContentContainer>
             </Tabs.Content>
-            
-            <Tabs.Content value='radio'>
-                <TabContentContainer entities={ favorites.radio }>
-                    <RadioTabContainer radios={ favorites.radio }/>
-                </TabContentContainer>
-            </Tabs.Content>
-
+          
             <Tabs.Content value='artists'>
                 <TabContentContainer entities={ favorites.artist }>
                     <ArtistsTabContent artists={ favorites.artist }/>

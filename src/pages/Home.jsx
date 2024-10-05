@@ -11,7 +11,6 @@ export default function Home() {
     error,
     isLoading,
   } = useSWR("/chart/0/tracks",fetchers);
-  console.log(tracks,'loading',isLoading)
   if (isLoading) {
     return <div>LOADING...</div>;
   }

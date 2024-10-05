@@ -10,9 +10,7 @@ const TopArtistsContainer = ({ limit }) => {
     error,
     isLoading,
   } = useSWR("/chart/0/artists",fetchers);
- 
-  console.log('lll',artists,'isLoading',isLoading,'error',error);
- 
+  
   if (isLoading) {
     return <div>LOADING...</div>;
   }

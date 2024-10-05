@@ -12,7 +12,6 @@ const FavoritesPage = () => {
             <Tabs.List className='tablist'>
                 <Tabs.Trigger value='tracks'>Tracks</Tabs.Trigger>
                 <Tabs.Trigger value='albums'>Albums</Tabs.Trigger>
-                <Tabs.Trigger value='radio'>Radio</Tabs.Trigger>
                 <Tabs.Trigger value='artists'>Artists</Tabs.Trigger>
                 <Tabs.Trigger value='playlists'>Playlists</Tabs.Trigger>
             </Tabs.List>
