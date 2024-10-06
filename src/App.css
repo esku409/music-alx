@@ -74,7 +74,7 @@ strong {
   flex-direction: column;
   justify-content: space-between;
   grid-area: sidebar;
-  height:97vh;
+  height: 97vh;
   background: url(./assets/1.jpg );
 
 }
@@ -113,8 +113,8 @@ strong {
   padding: 1em 0 1em var(--padding-left);
   align-items: center;
   gap: 1ch;
-  background: linear-gradient(90deg, rgba(205, 25, 179, 0.25) 0%, rgba(205, 25, 179, 0) 50%);
-  background-position-x: -50px;
+  /* background: linear-gradient(90deg, rgba(205, 25, 179, 0.25) 0%, rgba(205, 25, 179, 0) 50%); */
+  background-position-x: -20px;
   background-repeat: no-repeat;
   transition: background-position .4s ease-in-out;
 }
@@ -470,7 +470,7 @@ small,
 }
 
 .player {
-  grid-area: player; 
+  grid-area: player;
   display: flex;
   height: 6vh;
   padding: 0 2.8em;
@@ -838,39 +838,118 @@ small,
 }
 
 @media (max-width: 820px) {
+  
+.main-container {
+  --searchbar-height: 100px;
+  --horizontal-padding: 2.8em;
+  display: grid;
+  grid-area: main;
+  padding:auto auto;
+  grid-template: 'searchbar searchbar searchbar'
+    'main-container main-container main-container';
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--searchbar-height) auto auto;
+  background: linear-gradient(110deg, rgb(53, 2, 41) 0%, rgb(89, 7, 84) 40%, rgba(122, 19, 29, 0.35) 70%, rgba(255, 0, 179, 0.8) 100%),
+    url('./assets/1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  background-position: right bottom;
+  padding-bottom: 200px;
+  background-size: auto auto, 150% 100%;
+  padding-top: 10px;
+
+}
+  .wrapper {
+    --player-height: 10%;
+    --vertical-padding: 2.5em;
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+      "sidebar sidebar sidebar"
+      "main main main"
+      "player player player";
+    grid-template-rows: auto auto var(--player-height);
+    grid-template-columns: auto 1fr 1fr;
+  }
+
   body {
     font-size: 10px;
     margin-bottom: 25px;
   }
 
-  .main-container {
-    background-size: auto auto, 150% 100%;
-  }
-
   .app-logo {
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    height: 10px;
+    width: 60px;
   }
-.sidebar{
-  height: 100vh;
-  
-}
-  .sidebar .app-logo span {
+
+  .sidebar h2 {
     display: none;
   }
 
-  .home-container {
+  .sidebar ul {
     display: flex;
-    flex-direction: column;
-    gap: 5vh;
+    flex-direction: row;
+    margin-top: 0px;
+    padding-top: 0px;
   }
 
-  .home-container .top-artists-container{
+  .sidebar a>* {
+    font-size: 1em;
+    color: var(--color-text-light);
+    display: flex;
+  }
+  .sidebar a {
+    display: flex;
+    padding: 1em 0 1em var(--padding-left);
+    align-items: center;
+    gap: 1ch;
+    background-position-x: -50px;
+    background-repeat: no-repeat;
+  }
+  .sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15px;
+    position: fixed;
+
+  }
+
+  .sidebar .app-logo span {
+    display: none;
+  }
+  
+.searchbar {
+  position: fixed;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  grid-area: searchbar;
+  color: var(--color-text-light);
+}
+
+
+  .home-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  
+
+  .home-container .top-artists-container {
     height: auto;
 
   }
+
   .home-container .track-list-container {
     height: 50%;
+    margin-top: 0px;
+    padding: 0px 0px;
   }
 
   .home-container .top-artists-container ul {
@@ -883,16 +962,22 @@ small,
 
   .artist-page {
     justify-content: space-evenly;
+    height: 100%;
   }
 
   .artist-page .track-list-container {
-    height: auto;
+    height: 100vh;
+
   }
 
   .top-playlists-container {
     margin: 0;
   }
-
+.track-list-container{
+  padding: 10px 10px;
+  margin-top: 60px;
+  height: 100%;
+}
   .track-list-item {
     padding: 0.7em 1em;
   }
@@ -912,4 +997,5 @@ small,
   .player .wave-container {
     margin: 0 1em;
   }
+ 
 }
