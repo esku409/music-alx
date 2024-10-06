@@ -857,7 +857,8 @@ small,
   background-position: right bottom;
   padding-bottom: 200px;
   background-size: auto auto, 150% 100%;
-  padding-top: 10px;
+  padding-top: 20px;
+  /* height: auto; */
 
 }
   .wrapper {
@@ -934,7 +935,7 @@ small,
 
 
   .home-container {
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     gap: 3vh;
