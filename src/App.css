@@ -112,7 +112,6 @@ strong {
   display: flex;
   padding: 1em 0 1em var(--padding-left);
   align-items: center;
-  justify-content: space-between;
   gap: 1ch;
   background-position-x: -50px;
   background-repeat: no-repeat;
