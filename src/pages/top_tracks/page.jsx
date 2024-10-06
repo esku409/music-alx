@@ -3,7 +3,7 @@ import TrackListContainer from "../../components/others/TrackListContainer";
 import useSWR from 'swr';
 
 export default function TopTracks() {
-  const fetchers = (url) => fetchTopTracks({ limit: 50 });
+  const fetchers = (url) => fetchTopTracks({ limit: 400 });
 
   const {
     data: tracks,

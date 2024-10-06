@@ -5,6 +5,7 @@ import { formatDuration } from '../../utils/formatters';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdSkipPrevious, MdSkipNext, MdPlayArrow, MdPause, MdVolumeUp, MdVolumeMute } from 'react-icons/md';
 import { playNextSong, playPreviousSong, selectCurrentSong } from '../../redux/features/songsSlice';
+// import FavoriteButton from '../others/FavoriteButton';
 
 const Player = () => {
     const dispatch = useDispatch();
@@ -61,6 +62,8 @@ const Player = () => {
                             />
                     }
                 </div>
+                {/* <FavoriteButton id={ id } type={ type } /> */}
+
             </div>
         </>
     );

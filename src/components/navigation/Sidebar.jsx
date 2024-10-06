@@ -36,13 +36,7 @@ const Sidebar = () => {
                             <span>Artists</span>
                         </NavLink>
                     </li>
-{/* 
-                    <li>
-                        <NavLink slug='radio'>
-                            <FiRadio />
-                            <span>Radio</span>
-                        </NavLink>
-                    </li> */}
+
                 </ul>
             </div>
 
