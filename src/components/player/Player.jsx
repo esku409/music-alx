@@ -5,12 +5,12 @@ import { formatDuration } from '../../utils/formatters';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdSkipPrevious, MdSkipNext, MdPlayArrow, MdPause, MdVolumeUp, MdVolumeMute } from 'react-icons/md';
 import { playNextSong, playPreviousSong, selectCurrentSong } from '../../redux/features/songsSlice';
-// import FavoriteButton from '../others/FavoriteButton';
+import FavoriteButton from '../others/FavoriteButton';
 
 const Player = () => {
     const dispatch = useDispatch();
     const waveContainerRef = useRef(null);
-    const { album, title, artist, preview: audioSrc, duration } = useSelector(selectCurrentSong);
+    const { album, title, artist, preview: audioSrc, duration ,id} = useSelector(selectCurrentSong);
     const { handlePlayPause, isPlaying, setAudioVolume, audioVolume } = useWavesurfer(waveContainerRef, audioSrc, () => dispatch(playNextSong()));
     const formattedDuration = formatDuration(duration);
 
@@ -62,7 +62,7 @@ const Player = () => {
                             />
                     }
                 </div>
-                {/* <FavoriteButton id={ id } type={ type } /> */}
+                <FavoriteButton id={ id } type={ 'track' } />
 
             </div>
         </>
