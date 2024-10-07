@@ -5,7 +5,7 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 import persistStore from "redux-persist/es/persistStore";
 import Home from "./pages/Home";
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createHashRouter,createBrowserRouter, RouterProvider} from 'react-router-dom';
 import RootLayout from "./RootLayout";
 import TopTracks from "./pages/top_tracks/page";
 import ArtistPage from "./pages/Artist/page";
@@ -18,8 +18,7 @@ import FavoritesPage from "./pages/favorites/page";
 const persistor = persistStore(store);
 
 function App() {
-  const [count, setCount] = useState(0);
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: <RootLayout />, 
@@ -30,7 +29,6 @@ function App() {
         { path: 'playlist/:id', element: <Playlists/> },  
         { path: 'top_artists', element: <TopArtists/> }, 
         { path: 'album/:id', element: <AlbumPage/> },  
-
         { path: 'favorites', element: <FavoritesPage/> },  
       ],
     },
