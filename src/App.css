@@ -471,8 +471,8 @@ small,
 .player {
   grid-area: player; 
   display: flex;
-  height: 6vh;
-  padding: 0 2.8em;
+  height: 5vh;
+  padding: 2px 2.8em;
   align-items: center;
   position: fixed;
   bottom: 0;

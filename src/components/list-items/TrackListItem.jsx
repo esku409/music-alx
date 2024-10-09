@@ -13,7 +13,6 @@ const TrackListItem = ({
 }) => {
   const dispatch = useDispatch();
   const formattedDuration = formatDuration(duration);
-  console.log("type", type);
   return (
     <li
       className="track-list-item"

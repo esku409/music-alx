@@ -12,7 +12,7 @@ const Playlists = () => {
         data: data,
         error,
         isLoading,
-      } = useSWR("/chart/0/playlists/908",fetchers);
+      } = useSWR(`/chart/0/playlists/${id}`,fetchers);
      if (isLoading){
         return(
             <div>LOADing...</div>

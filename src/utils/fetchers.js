@@ -34,7 +34,7 @@ export async function fetchTopArtists({ limit = 3 } = {}) {
     const topArtists = await Promise.all(promises);
     
     return topArtists;
-}
+} 
 
 export async function fetchTopPlaylists() {
     const endpoint = `/chart/0/playlists`;
@@ -78,24 +78,7 @@ export async function fetchPlaylist(id) {
     return data;
 }
 
-export async function fetchTopRadio() {
-    const endpoint = '/radio/top';
-    const { data } = await fetchData(endpoint);
-    
-    return data;
-}
 
-export async function fetchRadio(id) {
-    const radioPromise = fetchData(`/radio/${ id }`);
-    const trackListPromise = fetchData(`/radio/${ id }/tracks`);
-
-    const [radio, tracks] = await Promise.all([radioPromise, trackListPromise]);
-    
-    return {
-        ...radio,
-        tracks: tracks.data
-    };
-}
 
 export async function fetchSearchData(query, { limit = 3 } = {}) {
     const endpoint = (category) => `/search/${ category }?q=${ query }&limit=${ limit }`;
